@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://myfootiesbd.com/sitemap.xml
+Sitemap: https://myfootiesbd.github.io/sitemap.xml
