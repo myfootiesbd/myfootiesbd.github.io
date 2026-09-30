@@ -5,7 +5,28 @@
   const SUPABASE_URL =  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   ;
   sb_publishable_rlkMSYK3nsTOnX79TN91wQ_GLr3TN9i
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <script>
+  const supabaseClient = supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_KEY
+  );
+
+  async function loadPosts() {
+    const { data, error } = await supabaseClient
+      .from("my-footies-bd")
+      .select("*");
+
+    if (error) {
+      console.error(error);
+      return;
+    }
+
+    console.log(data);
+  }
+
+  loadPosts();
+  </script><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>My Footies BD | Bangladesh Football News, Fixtures & Results</title><meta name="description" content="Bangladesh football news, national team squad, fixtures, results and competitions.">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://myfootiesbd.github.io/">
